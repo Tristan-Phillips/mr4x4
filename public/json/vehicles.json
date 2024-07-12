@@ -1,0 +1,14 @@
+{
+    "vehicles": [
+        {
+            "make": "Toyota",
+            "model": "Camry",
+            "year": 2022
+        },
+        {
+            "make": "Toyota",
+            "model": "Camry",
+            "year": 2021
+        }
+    ]
+}
