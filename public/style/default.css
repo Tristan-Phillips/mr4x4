@@ -50,6 +50,10 @@ header .column:nth-of-type(odd) {
 }
 
 /*H1 style*/
+header {
+    position: relative;
+}
+
 header h1 {
     position: absolute;
     z-index: 10; 
@@ -57,18 +61,24 @@ header h1 {
     font-size: 3em;
     left: 50%;
     transform: translateX(-50%);
+    bottom: 0;
 }
 
 /*Navigation menue style*/
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
 nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+    display: flex;
+    justify-content: center;
 }
   
 nav li {
