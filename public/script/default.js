@@ -5,6 +5,14 @@ for (let year = new Date().getFullYear(); year >= 1990; year--) {
     yearElement.innerHTML += `<option value="${year}">${year}</option>`;
 }
 
+//TODO FIX TOP OF LIST NOT BOTTOM
+// Add default car year option
+const defaultYearOption = document.createElement('option');
+    defaultYearOption.text = "Select Year";
+    defaultYearOption.disabled = true;
+    defaultYearOption.selected = true;
+    yearElement.add(defaultYearOption);
+
 const carData = {
     "Toyota": ["Camry", "Corolla", "Rav4"],
     "Honda": ["Civic", "Accord", "CR-V"],
@@ -21,6 +29,20 @@ const carData = {
 const carMakesDropdown = document.getElementById('make');
 const carModelsDropdown = document.getElementById('model');
 
+// Add default car make option
+const defaultCarMakeOption = document.createElement('option');
+    defaultCarMakeOption.text = "Select Make";
+    defaultCarMakeOption.disabled = true;
+    defaultCarMakeOption.selected = true;
+    carMakesDropdown.add(defaultCarMakeOption);
+
+// Add default car make option
+const defaultCarModelOption = document.createElement('option');
+    defaultCarModelOption.text = "Select Model";
+    defaultCarModelOption.disabled = true;
+    defaultCarModelOption.selected = true;
+    carModelsDropdown.add(defaultCarModelOption);
+
 // Populate car makes dropdown
 Object.keys(carData).forEach(make => {
     const option = document.createElement('option');
@@ -36,12 +58,20 @@ carMakesDropdown.addEventListener('change', function() {
     // Clear existing options
     carModelsDropdown.innerHTML = '';
 
+    // Add default option
+    const defaultOption = document.createElement('option');
+        defaultOption.text = "Select Model";
+        defaultOption.disabled = true;
+        defaultOption.selected = true;
+        carModelsDropdown.add(defaultOption);
+
     // Populate car models dropdown based on selected make
     models.forEach(model => {
         const option = document.createElement('option');
         option.text = model;
         carModelsDropdown.add(option);
     });
+ 
 });
 
 // Make Header Columns Slide
