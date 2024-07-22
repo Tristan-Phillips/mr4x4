@@ -55,6 +55,7 @@ header h1 {
     position: absolute;
     z-index: 10; 
     color: orange;
+    text-shadow: 2px 2px 4px black;
     font-size: 3em;
     left: 50%;
     transform: translateX(-50%);
