@@ -1,9 +1,0 @@
-- Social Media Icon Integration
-    - instagram
-    - facebook
-    - whatsapp
-- Google reviews integration
-- Google maps
-- Forum contact static
-- Static Hugo Blog Section
-- 

@@ -1,5 +1,0 @@
-baseURL = 'https://mr4x4adnmore.com/blog/'
-languageCode = 'en-us'
-title = 'Mr 4x4'
-theme = "stack"
-publishDir = "../../"

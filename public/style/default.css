@@ -1,203 +1,47 @@
-/*Universal style*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color-black: #000000;
+    --primary-color-white: #ffffff;
+    --primary-brand-color: #2b2622;
+    --primary-brand-color-light: #3c3a37;
+    --primary-brand-color-dark: #1d1b18;
+    --social-media-color-whatsapp: #25d366;
+    --social-media-color-facebook: #3b5998;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    height: 10000px; /*Temp to be removed*/
 }
 
-/*Header with columns style*/
 header {
+    user-select: none;
+    background-color: var(--primary-brand-color-dark);
     display: flex;
-	overflow: hidden;
-	height: 20vw;
-	background: #111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-header:hover img {
-	opacity: 0.5;
-}
-
-header img {
-	max-width: 100%;
-	vertical-align: middle;
-	border: 1px solid black;
-	box-sizing: border-box;
-	transition: opacity .2s;
-}
-
-header img:hover {
-	opacity: 1;
-}
-
-header .column {
-	animation: var(--animation, none) 16s infinite linear;
-}
-
-header .column:hover {
-	animation-play-state: paused;
-}
-
-header .column:nth-of-type(odd) {
-	align-self: flex-end;
-	--direction: 50%;
-}
-
-@keyframes slide {
-	to { transform: translateY(var(--direction, -50%)) }
-}
-
-/*H1 style*/
-header {
-    position: relative;
-}
-
-header h1 {
-    position: absolute;
-    z-index: 10; 
-    color: orange;
-    text-shadow: 2px 2px 4px black;
-    font-size: 3em;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-}
-
-/*Nav Social Links*/
-header ul.social {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 11;
-}
-
-header ul.social li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header ul.social li a {
-    color: white;
+.header__title__link {
+    color: var(--primary-color-white);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.5rem;
 }
 
-/*Navigation menue style*/
-nav {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-}
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-}
-  
-nav li {
-    float: left;
-}
-
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+.header__icon {
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
-nav li a:hover {
-    background-color: #111;
+.header__icon--whatsapp {
+    color: var(--social-media-color-whatsapp);
 }
 
-/*Form submission style*/
-/* form {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-select {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-} */
-
-form {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input[type="text"], input[type="email"], input[type="password"], select {
-    width: calc(33% - 10px);
-    margin-right: 10px;
-}
-
-/*Accessories Grid Style*/
-
-#accessories-grid {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 20px;
-    padding: 20px;
-}
-
-#accessories-grid img {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-#accessories-grid .accessory h3 {
-    text-align: center;
-}
-
-#accessories-grid .accessory p {
-    text-align: center;
-}
-
-#accessories-grid .accessory button {
-    display: block;
-    margin: 0 auto;
-}
-
-.accessory {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
+.header__icon--facebook {
+    color: var(--social-media-color-facebook);
 }
